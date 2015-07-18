@@ -1,2 +1,26 @@
-
-<%= render 'form' %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h1 class="text-center">View Your Profile</h1>
+    <p class="text-center">Welcome to the community!</p>
+    <div class="well">
+        <div class="form-group">
+             <%= @user.profile.first_name %>
+          </div>
+          <div class="form-group">
+            <%= @user.profile.last_name %>
+          </div>
+          <div class="form-group">
+            <%= @user.profile.job_title %>
+          </div>
+          <div class="form-group">
+            <%= @user.profile.phone_number %>
+          </div>
+          <div class="form-group">
+            <%= @user.profile.contact_email %>
+          </div>
+          <div class="form-group">
+              <%= @user.profile.description %>
+          </div>
+      </div>
+    </div>
+</div>
