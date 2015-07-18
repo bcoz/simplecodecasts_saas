@@ -35,6 +35,9 @@ gem 'sdoc', '0.4.0', group: :doc
 # Use devise for user authentication
 gem 'devise', '3.5.1'
 
+# Install paperclip image
+gem 'paperclip', '4.3.0'
+
 # Use stripe for handling payments
 gem 'stripe', '1.23.0'
 
