@@ -1,27 +1,40 @@
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <h1 class="text-center">View Your Profile</h1>
-    <p class="text-center">Welcome to the community!</p>
     <div class="well">
+        <h1 class="text-center">View Your Profile</h1>
+        <p class="text-center">Welcome to the community!</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="avatar well col-md-2 text-center">
         <%= image_tag @user.profile.avatar.url %>
-        <div class="form-group">
-             <%= @user.profile.first_name %>
-          </div>
-          <div class="form-group">
-            <%= @user.profile.last_name %>
-          </div>
-          <div class="form-group">
-            <%= @user.profile.job_title %>
-          </div>
-          <div class="form-group">
-            <%= @user.profile.phone_number %>
-          </div>
-          <div class="form-group">
-            <%= @user.profile.contact_email %>
-          </div>
-          <div class="form-group">
-              <%= @user.profile.description %>
-          </div>
-      </div>
+    </div>
+
+    <div class="col-md-1">
+    </div>
+
+    <div class="avatar well col-md-8">
+
+        <h1><%= @user.profile.first_name %> <%= @user.profile.last_name %></h1>
+        <h3><span class="job-title-icon"><%= job_title_icon %></span> <%= @user.profile.job_title %></h3>
+        <div class="well profile-description">
+            <h3>Description</h3>
+            <%= @user.profile.description %>
+        </div>
+
+        <div class="contact-info well">
+            <h3>Contact info</h3>
+            <% if true %>
+                <h4>Phone</h4>
+                <%= @user.profile.phone_number %>
+                <h4>Email</h4>
+                <%= @user.profile.contact_email %>
+            <% elsif %>
+                 <h4>Phone</h4>
+                <i>Professional only</i>
+                <h4>Email</h4>
+                <i>Professional only</i>
+            <% end %>
+        </div>
     </div>
 </div>
