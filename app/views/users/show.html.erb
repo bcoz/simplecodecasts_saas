@@ -3,6 +3,7 @@
     <h1 class="text-center">View Your Profile</h1>
     <p class="text-center">Welcome to the community!</p>
     <div class="well">
+        <%= image_tag @user.profile.avatar.url %>
         <div class="form-group">
              <%= @user.profile.first_name %>
           </div>
